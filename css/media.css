@@ -1,0 +1,205 @@
+/* 태블릿 */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  header {
+    height: 100px;
+    padding: 0 40px;
+  }
+  
+  header .navBtn i {
+    font-size: 24px;
+  }
+  
+  header nav ul {
+    padding-top: 100px;
+  }
+  
+  header nav ul li {
+    padding-left: 24px;
+  }
+  
+  header nav ul li a {
+    font-size: var(--font-mlz);
+  }
+  
+  header nav .navHeader {
+    height: 100px;
+  }
+  
+  header nav .navHeader button i {
+    font-size: 24px;
+  }
+  
+  header .searchForm {
+    top: 100px;
+    padding: 40px 40px;
+  }
+  
+  header .searchForm button {
+    right: 50px;
+  }
+  
+  header .searchForm button i {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 노트북 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 100px;
+    padding: 0 60px;
+  }
+  
+  header .navBtn i {
+    font-size: 24px;
+  }
+  
+  header nav ul {
+    padding-top: 100px;
+  }
+  
+  header nav ul li {
+    padding-left: 24px;
+  }
+  
+  header nav ul li a {
+    font-size: var(--font-mlz);
+  }
+  
+  header nav .navHeader {
+    height: 100px;
+  }
+  
+  header nav .navHeader button i {
+    font-size: 24px;
+  }
+  
+  header .searchForm {
+    top: 100px;
+    padding: 60px 60px;
+  }
+
+  header .searchForm input {
+    width: 100%;
+    padding: 20px 60px 20px 40px;
+  }
+  
+  header .searchForm button {
+    right: 80px;
+  }
+  
+  header .searchForm button i {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PC */
+@media screen and (min-width: 1025px) {
+  header {
+    height: 100px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  header .navBtn {
+    display: none;
+  }
+  
+  header nav {
+    position: initial;
+    height: 100%;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  header nav ul {
+    padding-top: 0;
+    display: flex;  
+  }
+  
+  header nav ul li {
+    height: 100px;
+    padding-left: 0;
+    line-height: 100px;
+    text-align: center;
+  }
+  
+  header nav ul li:nth-child(odd) {
+    background-color: transparent;
+  }
+  
+  header nav ul li a {
+    font-size: var(--font-lz);
+    color: #FFF;
+  }
+  
+  header nav .navHeader {
+    display: none;
+  }
+
+  header .searchForm {
+    position: initial;
+    width: 180px;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+  }
+
+  header .searchForm.active {
+    display: flex;
+  }
+  
+  header .searchForm input {
+    padding: 10px 40px 10px 20px;
+  }
+  
+  header .searchForm button {
+    right: 90px;
+  }
+  
+  header .searchForm button i {
+    font-size: 20px;
+  }
+}
+
