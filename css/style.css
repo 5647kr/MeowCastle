@@ -1,0 +1,141 @@
+header {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  background-color: var(--point-color);
+  box-shadow: 0 2px 4px rgba(62, 60, 110, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+header .navBtn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navBtn button:last-child {
+  display: none;
+}
+
+header .navBtn i {
+  font-size: 20px;
+  color: #FFF;
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 450px;
+  height: 100vh;
+  background-color: var(--bg-color);
+  z-index: 20;
+  display: none;
+}
+
+header nav.active {
+  display: block;
+}
+
+header nav ul {
+  padding-top: 80px;
+}
+
+header nav ul li {
+  width: 100%;
+  height: 80px;
+  padding-left: 20px;
+  line-height: 80px;
+}
+
+header nav ul li:nth-child(odd) {
+  background-color: var(--main-color);
+}
+
+header nav ul li a {
+  font-size: var(--font-mz);
+  font-weight: var(--font-sbw);
+}
+
+header nav .navHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--sub-color);
+}
+
+header nav .navHeader button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header nav .navHeader button i {
+  font-size: 20px;
+  color: #FFF;
+}
+
+header .searchForm {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  padding: 40px 20px;
+  z-index: 10;
+  background-color: #FFF;
+  display: none;
+}
+
+header .searchForm.active {
+  display: block;
+}
+
+header .searchForm input {
+  width: 100%;
+  padding: 8px 40px 8px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--point-color);
+}
+
+header .searchForm input:focus {
+  outline: none;
+}
+
+header .searchForm button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header .searchForm button i {
+  font-size: 20px;
+}
+
+.blindBg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  display: none;
+}
+
+.blindBg.active {
+  display: block;
+}
