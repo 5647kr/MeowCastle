@@ -5,6 +5,14 @@
     padding: 0 40px;
   }
   
+  header .logoWrap h1 {
+    height: 30px;
+  }
+
+  header .logoWrap img {
+    height: 30px;
+  }
+  
   header .navBtn i {
     font-size: 24px;
   }
@@ -67,6 +75,14 @@
   header {
     height: 100px;
     padding: 0 60px;
+  }
+
+  header .logoWrap h1 {
+    height: 40px;
+  }
+
+  header .logoWrap img {
+    height: 40px;
   }
   
   header .navBtn i {
@@ -137,7 +153,23 @@
     height: 100px;
     padding: 0 80px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .logoWrap {
+    position: static;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0)
+  }
+  
+  header .logoWrap h1 {
+    height: 40px;
+  }
+  
+  header .logoWrap img {
+    height: 40px;
   }
   
   header .navBtn {
@@ -145,7 +177,7 @@
   }
   
   header nav {
-    position: initial;
+    position: static;
     height: 100%;
     background-color: transparent;
     display: block;
@@ -178,7 +210,7 @@
   }
 
   header .searchForm {
-    position: initial;
+    position: static;
     width: 180px;
     padding: 0;
     background-color: transparent;

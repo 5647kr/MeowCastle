@@ -10,6 +10,22 @@ header {
   z-index: 999;
 }
 
+header .logoWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .logoWrap h1 {
+  height: 26px;
+}
+
+header .logoWrap img {
+  vertical-align: top;
+  height: 26px;
+}
+
 header .navBtn {
   width: 100%;
   height: 100%;
