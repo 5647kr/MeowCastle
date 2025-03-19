@@ -124,10 +124,6 @@ header .searchForm input {
   border: 1px solid var(--point-color);
 }
 
-header .searchForm input:focus {
-  outline: none;
-}
-
 header .searchForm button {
   width: 30px;
   height: 30px;
@@ -148,10 +144,116 @@ header .searchForm button i {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  z-index: 10;
   display: none;
 }
 
 .blindBg.active {
   display: block;
 }
+
+
+
+
+
+main {
+  margin-top: 80px;
+}
+
+main section {
+  padding: 40px 20px;
+}
+
+main section:nth-child(odd) {
+  background-color: var(--bg-color);
+}
+
+main section h3 {
+  font-size: var(--font-smz);
+  font-weight: var(--font-bw);
+}
+
+.heroSection {
+  padding: 0;
+  padding-left: 20px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heroSection .titleWrap {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+}
+
+.heroSection .titleWrap h4 {
+  font-size: var(--font-sz);
+  font-weight: var(--font-mw);
+  color: #333;
+  margin: 10px 0 20px;
+}
+
+.heroSection .titleWrap .btnWrap button {
+  width: 60px;
+  height: 20px;
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  font-size: 10px;
+  color: #333;
+}
+
+.heroSection .titleWrap .btnWrap button:first-child {
+  background-color: var(--main-color);
+  color: #FFF;
+}
+
+.heroSection .imgWrap img {
+  height: 350px;
+  vertical-align: top;
+}
+
+
+
+.makingSection h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.makingSection ol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin: 0 40px;
+}
+
+.makingSection .makeProgress {
+  aspect-ratio: 1 / 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+}
+
+.makingSection .makeProgress i {
+  font-size: 60px;
+  color: var(--main-color);
+}
+
+.makingSection .makeProgress h4 {
+  font-size: var(--font-smz);
+  text-align: right;
+  color: var(--sub-color);
+}
+
+.makingSection .detailProgress {
+  margin-top: 20px;
+}
+
+.makingSection .detailProgress li {
+  font-size: var(--font-smz);
+  list-style: disc;
+  list-style-position: inside;
+}
+  
