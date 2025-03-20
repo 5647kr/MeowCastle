@@ -101,7 +101,6 @@ class MeowCastle {
     reserveInput.forEach((input) => {
       if(input.type === "tel") {
         input.addEventListener("input", () => {
-          console.log("이거임")
           input.value = input.value.replace(/[^0-9]/g, "");
         })
       }
@@ -118,6 +117,12 @@ class MeowCastle {
     });
   
     inquiryInput.forEach((input) => {
+      if(input.type === "tel") {
+        input.addEventListener("input", () => {
+          input.value = input.value.replace(/[^0-9]/g, "");
+        })
+      }
+      
       input.addEventListener("input", () => {
         if (checkInputs(inquiryInput) && inquiryTxt.value.trim() !== "") {
           inquiryBtn.classList.add("active");
