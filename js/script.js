@@ -29,20 +29,24 @@ class MeowCastle {
       this.blindBg.classList.add("active");
       this.navMenu.classList.add("active");
       searchBtn.disabled = true;
+      document.body.style.overflow = "hidden"
     })
     
     this.navCloseBtn.addEventListener("click", () => {
       this.blindBg.classList.remove("active");
       this.navMenu.classList.remove("active");
       searchBtn.disabled = false;
+      document.body.style.overflow = "initial"
     })
-
+    
     searchBtn.addEventListener("click", () => {
       searchBtn.style.display = "none"
       closeBtn.style.display = "block"
       this.searchForm.classList.add("active");
       this.blindBg.classList.add("active");
+      this.blindBg.classList.add("search");
       menuBtn.disabled = true;
+      document.body.style.overflow = "hidden"
     })
     
     closeBtn.addEventListener("click", () => {
@@ -50,7 +54,9 @@ class MeowCastle {
       closeBtn.style.display = "none"
       this.searchForm.classList.remove("active");
       this.blindBg.classList.remove("active");
+      this.blindBg.classList.remove("search");
       menuBtn.disabled = false;
+      document.body.style.overflow = "initial"
     })
   }
 
