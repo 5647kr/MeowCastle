@@ -1,5 +1,5 @@
 /* 태블릿 */
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   header {
     height: 100px;
     padding: 0 40px;
@@ -48,6 +48,132 @@
   
   header .searchForm button i {
     font-size: 20px;
+  }
+
+  .blindBg.search {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
+
+
+
+  main {
+    margin-top: 100px;
+  }
+  
+  main section {
+    padding: 60px;
+  }
+  
+  main section h3 {
+    font-size: var(--font-mz);
+  }
+
+
+  
+
+  .heroSection .titleWrap {
+    left: 60px;
+  }
+  
+  .heroSection .titleWrap h4 {
+    font-size: var(--font-smz);
+  }
+  
+  .heroSection .imgWrap img {
+    height: 400px;
+  }
+
+
+
+
+  .makingSection h3, .awardSection h3 {
+    margin-bottom: 60px;
+  }
+  
+  .makingSection .makeProgress {
+    padding: 30px;
+  }
+  
+  .makingSection .makeProgress i {
+    font-size: 80px;
+  }
+  
+  .makingSection .makeProgress h4 {
+    font-size: var(--font-mz);
+  }
+  
+  .makingSection .detailProgress {
+    margin-top: 20px;
+  }
+  
+  .makingSection .detailProgress li {
+    font-size: var(--font-mz);
+  }
+
+
+
+
+  .awardSection .awardList li {
+    min-width: 180px;
+    height: 220px;
+  }
+  
+  .awardSection .awardList li h4 {
+    font-size: var(--font-mz);
+  }
+  
+  .awardSection .awardList li:last-child i:first-child {
+    font-size: 50px;
+  }
+  
+  .awardSection .awardList li:last-child i:last-child {
+    font-size: 80px;
+  }
+
+
+
+
+  .productSection > div {
+    margin: 60px 0;
+  }
+
+  .productSection > div p {
+    font-size: var(--font-mz);
+  }
+
+  .productSection ul {
+    padding-bottom: 60px;
+  }
+
+  .productSection ul li {
+    width: 160px;
+  }
+
+  .productSection ul li img {
+    height: 100%;
+  }
+
+  .productSection > div .productBtn button i {
+    font-size: 16px;
+  }
+
+
+
+  .faqSection .formWrap {
+    padding: 30px;
+  }
+  
+  .faqSection .formWrap form input {
+    padding: 10px 20px;
+  }
+  
+  .faqSection .formWrap form textarea {
+    padding: 10px 20px;
+  }
+  
+  .faqSection .formWrap form button {
+    padding: 10px 20px;
   }
 }
 
@@ -125,6 +251,168 @@
   
   header .searchForm button i {
     font-size: 24px;
+  }
+
+  .blindBg.search {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
+
+
+
+  main {
+    margin-top: 100px;
+  }
+  
+  main section {
+    padding: 80px;
+  }
+  
+  main section h3 {
+    font-size: var(--font-mlz);
+  }
+
+
+
+  .heroSection {
+    padding-right: 80px;
+  }
+  
+  .heroSection .titleWrap {
+    left: 80px;
+  }
+  
+  .heroSection .titleWrap h4 {
+    font-size: var(--font-mz);
+  }
+
+  .heroSection .titleWrap .btnWrap button {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .heroSection .imgWrap img {
+    height: 500px;
+  }
+
+
+  
+  .makingSection h3, .awardSection h3 {
+    margin-bottom: 80px;
+  }
+
+  .makingSection ol {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 0;
+  }
+
+  .makingSection .makeProgress {
+    padding: 40px;
+    aspect-ratio: initial;
+  }
+
+  .makingSection .makeProgress i {
+    font-size: 100px;
+  }
+
+  .makingSection .makeProgress h4 {
+    font-size: var(--font-mlz);
+  }
+
+  .makingSection .detailProgress {
+    margin-top: 20px;
+  }
+
+  .makingSection .detailProgress li {
+    font-size: var(--font-mlz);
+  }
+
+
+
+
+  
+  .awardSection .awardList li {
+    min-width: 200px;
+    height: 240px;
+  }
+  
+  .awardSection .awardList .awardIcon {
+    text-align: center;
+  }
+  
+  .awardSection .awardList .awardIcon i {
+    font-size: 80px;
+    color: var(--main-color);
+  }
+  
+  .awardSection .awardList li h4 {
+    font-size: var(--font-mlz);
+  }
+  
+  .awardSection .awardList li:last-child i:first-child {
+    left: 40px;
+    font-size: 40px;
+  }
+  
+  .awardSection .awardList li:last-child i:last-child {
+    font-size: 80px;
+  }
+
+
+
+  .productSection > div {
+    margin: 80px 0;
+    position: relative;
+  }
+  
+  .productSection > div p {
+    font-size: var(--font-mlz);
+  }
+
+  .productSection ul li {
+    width: 180px;
+  }
+  
+  .productSection > div .productBtn button i {
+    font-size: 16px;
+  }
+
+
+
+  .faqSection .formWrap {
+    padding: 40px;
+  }
+  
+  .faqSection .formWrap .formBtnWrap {
+    margin: 40px 0 60px;
+  }
+  
+  .faqSection .formWrap .formBtnWrap button {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .faqSection .formWrap form input {
+    margin-bottom: 40px;
+    padding: 10px 20px;
+  }
+  
+  .faqSection .formWrap form input[type="time"] {
+    margin-bottom: 60px;
+  }
+  
+  .faqSection .formWrap form textarea {
+    margin-bottom: 60px;
+    padding: 10px 20px;
+  }
+  
+  .faqSection .formWrap form button {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }
 
@@ -232,6 +520,184 @@
   
   header .searchForm button i {
     font-size: 20px;
+  }
+
+
+
+
+  main {
+    margin-top: 100px;
+  }
+  
+  main section {
+    padding: 100px;
+  }
+  
+  main section h3 {
+    font-size: var(--font-lz);
+  }
+
+
+
+  .heroSection {
+    padding-right: 100px;
+  }
+
+  .heroSection .titleWrap {
+    top: 200px;
+    left: 100px;
+  }
+  
+  .heroSection .titleWrap h4 {
+    font-size: var(--font-mlz);
+    font-weight: var(--font-mw);
+  }
+  
+  .heroSection .titleWrap .btnWrap button {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .heroSection .titleWrap .btnWrap button:first-child {
+    background-color: var(--main-color);
+    color: #FFF;
+  }
+  
+  .heroSection .imgWrap img {
+    height: 600px;
+  }
+
+
+
+  .makingSection h3, .awardSection h3 {
+    margin-bottom: 100px;
+  }
+  
+  .makingSection ol {
+    display: flex;
+    gap: 40px;
+    margin: 0 40px;
+  }
+
+  .makingSection ol li {
+    width: 100%;
+  }
+  
+  .makingSection .makeProgress {
+    aspect-ratio: initial;
+    padding: 40px;
+  }
+  
+  .makingSection .makeProgress i {
+    font-size: 100px;
+    color: var(--main-color);
+  }
+  
+  .makingSection .makeProgress h4 {
+    font-size: var(--font-lz);
+  }
+  
+  .makingSection .detailProgress li {
+    font-size: var(--font-lz);
+  }
+
+
+
+
+  .awardSection .awardList {
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .awardSection .awardList li {
+    min-width: 220px;
+    height: 260px;
+  }
+
+  
+  .awardSection .awardList .awardIcon i {
+    font-size: 100px;
+  }
+  
+  .awardSection .awardList li h4 {
+    font-size: var(--font-lz);
+  }
+
+  
+  .awardSection .awardList li:last-child i:first-child {
+    left: 30px;
+    font-size: 60px;
+  }
+  
+  .awardSection .awardList li:last-child i:last-child {
+    font-size: 100px;
+  }
+
+
+
+
+  .productSection > div {
+    margin: 100px 0;
+  }
+  
+  .productSection > div p {
+    margin-bottom: 10px;
+    font-size: var(--font-lz);
+  }
+  
+  .productSection ul {
+    gap: 40px;
+    padding-bottom: 100px;
+  }
+  
+  .productSection ul li {
+    width: 200px;
+  }
+  
+  .productSection > div .productBtn button i {
+    font-size: 16px;
+  }
+
+
+
+
+
+  .faqSection .formWrap {
+    padding: 60px;
+  }
+
+  .faqSection .formWrap h3 {
+    font-size: var(--font-lz);
+  }
+  
+  .faqSection .formWrap .formBtnWrap {
+    margin: 40px 0 60px;
+  }
+  
+  .faqSection .formWrap .formBtnWrap button {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  
+  .faqSection .formWrap form input {
+    margin-bottom: 40px;
+    padding: 10px 20px;
+  }
+  
+  .faqSection .formWrap form input[type="time"] {
+    margin-bottom: 60px;
+  }
+  
+  .faqSection .formWrap form textarea {
+    margin-bottom: 60px;
+    padding: 10px 20px;
+  }
+  
+  .faqSection .formWrap form button {
+    padding: 10px 20px;
   }
 }
 
