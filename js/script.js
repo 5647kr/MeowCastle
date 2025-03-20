@@ -5,11 +5,19 @@ class MeowCastle {
     this.navMenu = header.querySelector("nav");
     this.navCloseBtn = header.querySelector("nav .navHeader button");
     this.searchForm = header.querySelector(".searchForm");
-    this.blindBg = document.querySelector(".blindBg")
+    this.blindBg = document.querySelector(".blindBg");
+
+    const main = document.querySelector("main");
+
+    this.faqSection = main.querySelector(".faqSection");
+    this.formBtn = this.faqSection.querySelectorAll(".formBtnWrap button");
+    this.faqForm = this.faqSection.querySelectorAll("form");
   }
 
   mainPageEvent() {
     this.navMenuEvent();
+    this.faqFormEvent();
+    this.faqFormValidate();
   }
 
   navMenuEvent() {
@@ -45,6 +53,87 @@ class MeowCastle {
       menuBtn.disabled = false;
     })
   }
+
+
+
+  faqFormEvent() {
+    const reserveBtn = this.formBtn[0]
+    const inquiryBtn = this.formBtn[1]
+    const reserveForm = this.faqForm[0]
+    const inquiryForm = this.faqForm[1]
+
+    reserveBtn.addEventListener("click", () => {
+      inquiryBtn.classList.remove("active");
+      reserveBtn.classList.add("active")
+      inquiryForm.classList.remove("active");
+      reserveForm.classList.add("active");
+    })
+
+    inquiryBtn.addEventListener("click", () => {
+      reserveBtn.classList.remove("active");
+      inquiryBtn.classList.add("active");
+      reserveForm.classList.remove("active");
+      inquiryForm.classList.add("active");
+    })
+  }
+
+  faqFormValidate() {
+    const reserveForm = this.faqSection.querySelector(".reserveForm");
+    const inquiryForm = this.faqSection.querySelector(".inquiryForm");
+  
+    const reserveInput = reserveForm.querySelectorAll("input");
+    const inquiryInput = inquiryForm.querySelectorAll("input");
+    const inquiryTxt = inquiryForm.querySelector("textarea");
+  
+    const reserveBtn = reserveForm.querySelector("button");
+    const inquiryBtn = inquiryForm.querySelector("button");
+  
+    const checkInputs = (inputs) => {
+      return Array.from(inputs).every(input => input.value.trim() !== "");
+    };
+  
+    reserveInput.forEach((input) => {
+      if(input.type === "tel") {
+        input.addEventListener("input", () => {
+          console.log("이거임")
+          input.value = input.value.replace(/[^0-9]/g, "");
+        })
+      }
+
+      input.addEventListener("input", () => {
+        if (checkInputs(reserveInput)) {
+          reserveBtn.classList.add("active");
+          reserveBtn.disabled = false;
+        } else {
+          reserveBtn.classList.remove("active");
+          reserveBtn.disabled = true;
+        }
+      });
+    });
+  
+    inquiryInput.forEach((input) => {
+      input.addEventListener("input", () => {
+        if (checkInputs(inquiryInput) && inquiryTxt.value.trim() !== "") {
+          inquiryBtn.classList.add("active");
+          inquiryBtn.disabled = false;
+        } else {
+          inquiryBtn.classList.remove("active");
+          inquiryBtn.disabled = true;
+        }
+      });
+    });
+  
+    inquiryTxt.addEventListener("input", () => {
+      if (checkInputs(inquiryInput) && inquiryTxt.value.trim() !== "") {
+        inquiryBtn.classList.add("active");
+        inquiryBtn.disabled = false;
+      } else {
+        inquiryBtn.classList.remove("active");
+        inquiryBtn.disabled = true;
+      }
+    });
+  }
+  
 }
 
 const meow = new MeowCastle();
