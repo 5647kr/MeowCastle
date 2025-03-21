@@ -581,6 +581,7 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
+    padding-bottom: 10px;
   }
   
   .makingSection > ol > li:not(:last-child) {
@@ -864,6 +865,7 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
+    padding-bottom: 10px;
   }
   
   .makingSection > ol > li:not(:last-child) {
