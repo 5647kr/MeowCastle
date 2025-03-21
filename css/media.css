@@ -60,20 +60,24 @@
   main {
     margin-top: 100px;
   }
-  
+
   main section {
-    padding: 60px;
+    padding: 60px 40px;
   }
-  
+
+  main section:nth-child(odd) {
+    background-color: var(--bg-color);
+  }
+
   main section h3 {
     font-size: var(--font-mz);
   }
 
 
-  
 
   .heroSection .titleWrap {
-    left: 60px;
+    top: 120px;
+    left: 40px;
   }
   
   .heroSection .titleWrap h4 {
@@ -85,26 +89,34 @@
   }
 
 
-
-
   .makingSection h3, .awardSection h3 {
     margin-bottom: 60px;
   }
+
+
+  .makingSection > ol > li {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .makingSection > ol > li:not(:last-child) {
+    margin-bottom: 40px;
+  }
   
   .makingSection .makeProgress {
-    padding: 30px;
+    width: 140px;
+    height: 140px;
   }
   
   .makingSection .makeProgress i {
-    font-size: 80px;
+    font-size: 60px;
   }
   
   .makingSection .makeProgress h4 {
     font-size: var(--font-mz);
-  }
-  
-  .makingSection .detailProgress {
-    margin-top: 20px;
   }
   
   .makingSection .detailProgress li {
@@ -113,49 +125,56 @@
 
 
 
+  .awardSection {
+    padding: 60px 40px 30px 40px;
+  }
 
-  .awardSection .awardList li {
-    min-width: 180px;
-    height: 220px;
+  .awardSection h3 {
+    margin-bottom: 30px;
+    padding-left: 20px;
   }
   
-  .awardSection .awardList li h4 {
-    font-size: var(--font-mz);
+  .awardSection .awardList {
+    gap: 40px;
+    padding: 30px 0 30px 0;
+  }
+
+
+
+
+
+  .productSection {
+    padding: 60px 20px;
   }
   
-  .awardSection .awardList li:last-child i:first-child {
-    font-size: 50px;
-  }
-  
-  .awardSection .awardList li:last-child i:last-child {
-    font-size: 80px;
-  }
-
-
-
-
   .productSection > div {
-    margin: 60px 0;
+    padding: 60px 20px 30px 0;
   }
-
-  .productSection > div p {
+  
+  
+  .productSection > div h3 {
+    padding-left: 20px;
     font-size: var(--font-mz);
   }
-
+  
   .productSection ul {
-    padding-bottom: 60px;
+    padding: 5px 0 30px 20px;
+    gap: 40px;
   }
-
+  
   .productSection ul li {
-    width: 160px;
+    min-width: 120px;
+    height: 120px;
   }
-
-  .productSection ul li img {
-    height: 100%;
+  
+  .productSection > div .productBtn {
+    position: absolute;
+    top: 60px;
+    right: 40px;
   }
-
+  
   .productSection > div .productBtn button i {
-    font-size: 16px;
+    font-size: var(--font-mz);
   }
 
 
@@ -163,37 +182,7 @@
   .faqSection .formWrap {
     padding: 30px;
   }
-  
-  .faqSection .formWrap form input {
-    padding: 10px 20px;
-  }
-  
-  .faqSection .formWrap form textarea {
-    padding: 10px 20px;
-  }
-  
-  .faqSection .formWrap form button {
-    padding: 10px 20px;
-  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 노트북 */
@@ -259,13 +248,12 @@
   }
 
 
-
   main {
     margin-top: 100px;
   }
   
   main section {
-    padding: 80px;
+    padding: 80px 60px;
   }
   
   main section h3 {
@@ -274,16 +262,21 @@
 
 
 
+
+
+
   .heroSection {
-    padding-right: 80px;
+    padding-right: 60px;
   }
   
   .heroSection .titleWrap {
-    left: 80px;
+    top: 140px;
+    left: 60px;
   }
   
   .heroSection .titleWrap h4 {
     font-size: var(--font-mz);
+    margin: 20px 0 40px;
   }
 
   .heroSection .titleWrap .btnWrap button {
@@ -297,35 +290,34 @@
   }
 
 
-  
+
+
+
   .makingSection h3, .awardSection h3 {
     margin-bottom: 80px;
   }
-
-  .makingSection ol {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  
+  .makingSection > ol > li {
     gap: 40px;
-    margin: 0;
   }
-
+  
+  .makingSection > ol > li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  
   .makingSection .makeProgress {
-    padding: 40px;
-    aspect-ratio: initial;
+    width: 160px;
+    height: 160px;
   }
-
+  
   .makingSection .makeProgress i {
-    font-size: 100px;
+    font-size: 80px;
   }
-
+  
   .makingSection .makeProgress h4 {
     font-size: var(--font-mlz);
   }
-
-  .makingSection .detailProgress {
-    margin-top: 20px;
-  }
-
+  
   .makingSection .detailProgress li {
     font-size: var(--font-mlz);
   }
@@ -333,19 +325,29 @@
 
 
 
+
+  
+  .awardSection {
+    padding: 80px 60px 40px 60px;
+  }
+  
+  .awardSection h3 {
+    margin-bottom: 40px;
+    padding-left: 30px;
+  }
+  
+  .awardSection .awardList {
+    gap: 40px;
+    padding: 40px 0 40px 0;
+  }
   
   .awardSection .awardList li {
     min-width: 200px;
     height: 240px;
   }
   
-  .awardSection .awardList .awardIcon {
-    text-align: center;
-  }
-  
   .awardSection .awardList .awardIcon i {
     font-size: 80px;
-    color: var(--main-color);
   }
   
   .awardSection .awardList li h4 {
@@ -353,8 +355,7 @@
   }
   
   .awardSection .awardList li:last-child i:first-child {
-    left: 40px;
-    font-size: 40px;
+    font-size: 50px;
   }
   
   .awardSection .awardList li:last-child i:last-child {
@@ -363,26 +364,44 @@
 
 
 
-  .productSection > div {
-    margin: 80px 0;
-    position: relative;
+  .productSection {
+    padding: 80px 30px;
   }
   
-  .productSection > div p {
+  .productSection > div {
+    padding: 60px 30px 30px 0;
+  }
+  
+  .productSection > div h3 {
+    padding-left: 30px;
     font-size: var(--font-mlz);
   }
-
+  
+  .productSection ul {
+    display: flex;
+    gap: 40px;
+    padding: 5px 0 30px 30px;
+  }
+  
   .productSection ul li {
-    width: 180px;
+    min-width: 140px;
+    height: 140px;
+  }
+  
+  .productSection > div .productBtn {
+    position: absolute;
+    top: 60px;
+    right: 60px;
   }
   
   .productSection > div .productBtn button i {
-    font-size: 16px;
+    font-size: var(--font-mlz);
   }
 
 
 
   .faqSection .formWrap {
+    background-color: #FFF;
     padding: 40px;
   }
   
@@ -395,48 +414,29 @@
     height: 30px;
     font-size: 14px;
   }
+
   
   .faqSection .formWrap form input {
-    margin-bottom: 40px;
     padding: 10px 20px;
-  }
-  
-  .faqSection .formWrap form input[type="time"] {
-    margin-bottom: 60px;
+    font-size: var(--font-smz);
   }
   
   .faqSection .formWrap form textarea {
-    margin-bottom: 60px;
     padding: 10px 20px;
+    font-size: var(--font-smz);
   }
   
   .faqSection .formWrap form button {
     padding: 10px 20px;
-    font-size: 14px;
+    margin-top: 60px;
+    font-size: var(--font-smz);
   }
+
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* PC */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1025px) and (max-width: 1460px) {
   header {
     height: 100px;
     padding: 0 80px;
@@ -525,12 +525,15 @@
 
 
 
+
+
+
   main {
     margin-top: 100px;
   }
   
   main section {
-    padding: 100px;
+    padding: 80px;
   }
   
   main section h3 {
@@ -540,28 +543,305 @@
 
 
   .heroSection {
-    padding-right: 100px;
+    padding-right: 80px;
   }
 
   .heroSection .titleWrap {
-    top: 200px;
-    left: 100px;
+    top: 160px;
+    left: 80px;
   }
   
   .heroSection .titleWrap h4 {
     font-size: var(--font-mlz);
-    font-weight: var(--font-mw);
   }
   
   .heroSection .titleWrap .btnWrap button {
-    width: 80px;
-    height: 30px;
-    font-size: 14px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
   }
   
-  .heroSection .titleWrap .btnWrap button:first-child {
-    background-color: var(--main-color);
+  .heroSection .imgWrap img {
+    height: 550px;
+  }
+
+
+
+  .makingSection h3, .awardSection h3 {
+    margin-bottom: 80px;
+  }
+
+  .makingSection > ol {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .makingSection > ol > li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .makingSection > ol > li:not(:last-child) {
+    margin-bottom: 0;
+  }
+  
+  .makingSection .makeProgress {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 30px;
+  }
+  
+  .makingSection .makeProgress i {
+    font-size: 100px;
+  }
+  
+  .makingSection .makeProgress h4 {
+    font-size: var(--font-lz);
+  }
+
+  .makingSection .detailProgress li {
+    font-size: var(--font-lz);
+    text-align: center;
+  }
+
+
+
+
+  .awardSection {
+    padding: 80px 80px 40px 80px;
+  }
+  
+  .awardSection h3 {
+    margin-bottom: 40px;
+    padding-left: 40px;
+  }
+  
+  .awardSection .awardList {
+    gap: 60px;
+    padding: 40px 0 40px 0;
+  }
+  
+  .awardSection .awardList li {
+    min-width: 200px;
+    height: 240px;
+  }
+  
+  .awardSection .awardList .awardIcon i {
+    font-size: 80px;
+  }
+  
+  .awardSection .awardList li h4 {
+    font-size: var(--font-lz);
+  }
+  
+  .awardSection .awardList li:last-child i:first-child {
+    font-size: 50px;
+  }
+  
+  .awardSection .awardList li:last-child i:last-child {
+    font-size: 80px;
+  }
+
+
+
+  .productSection {
+    padding: 80px 40px;
+  }
+
+  .productSection > div {
+    padding: 80px 40px 40px 0;
+  }
+  
+  .productSection > div h3 {
+    padding-left: 40px;
+    font-size: var(--font-lz);
+  }
+  
+  .productSection ul {
+    gap: 60px;
+    padding: 5px 0 40px 40px;
+  }
+  
+  .productSection ul li {
+    min-width: 160px;
+    height: 160px;
+  }
+  
+  .productSection > div .productBtn {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+  }
+  
+  .productSection > div .productBtn button i {
+    font-size: var(--font-lz);
+  }
+
+
+
+
+
+
+  .faqSection .formWrap {
+    background-color: #FFF;
+    padding: 60px;
+  }
+  
+  .faqSection .formWrap .formBtnWrap {
+    margin: 40px 0 60px;
+  }
+  
+  .faqSection .formWrap .formBtnWrap button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .faqSection .formWrap form input {
+    padding: 10px 20px;
+    font-size: var(--font-mz);
+  }
+  
+  .faqSection .formWrap form textarea {
+    padding: 10px 20px;
+    font-size: var(--font-mz);
+  }
+  
+  .faqSection .formWrap form button {
+    padding: 10px 20px;
+    margin-top: 60px;
+    font-size: var(--font-mz);
+  }
+}
+
+/* 4k */
+@media screen and (min-width: 1461px) {
+  header {
+    height: 100px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .logoWrap {
+    position: static;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0)
+  }
+  
+  header .logoWrap h1 {
+    height: 40px;
+  }
+  
+  header .logoWrap img {
+    height: 40px;
+  }
+  
+  header .navBtn {
+    display: none;
+  }
+  
+  header nav {
+    position: static;
+    height: 100%;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  header nav ul {
+    padding-top: 0;
+    display: flex;  
+  }
+  
+  header nav ul li {
+    height: 100px;
+    padding-left: 0;
+    line-height: 100px;
+    text-align: center;
+  }
+  
+  header nav ul li:nth-child(odd) {
+    background-color: transparent;
+  }
+  
+  header nav ul li a {
+    font-size: var(--font-lz);
     color: #FFF;
+  }
+  
+  header nav .navHeader {
+    display: none;
+  }
+
+  header .searchForm {
+    position: static;
+    width: 180px;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+  }
+
+  header .searchForm.active {
+    display: flex;
+  }
+  
+  header .searchForm input {
+    padding: 10px 40px 10px 20px;
+  }
+  
+  header .searchForm button {
+    right: 90px;
+  }
+  
+  header .searchForm button i {
+    font-size: 20px;
+  }
+
+
+
+
+
+
+
+  main {
+    margin-top: 100px;
+  }
+  
+  main section {
+    padding: 100px;
+  }
+  
+  main section h3 {
+    font-size: 24px;
+  }
+
+
+
+  .heroSection {
+    padding-right: 100px;
+  }
+
+  .heroSection .titleWrap {
+    top: 180px;
+    left: 100px;
+  }
+  
+  .heroSection .titleWrap h4 {
+    font-size: var(--font-lz);
+    margin: 20px 0 40px;
+  }
+  
+  .heroSection .titleWrap .btnWrap button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
   }
   
   .heroSection .imgWrap img {
@@ -573,90 +853,121 @@
   .makingSection h3, .awardSection h3 {
     margin-bottom: 100px;
   }
-  
-  .makingSection ol {
-    display: flex;
-    gap: 40px;
-    margin: 0 40px;
-  }
 
-  .makingSection ol li {
+  .makingSection > ol {
+    display: flex;
+    gap: 80px;
+  }
+  
+  .makingSection > ol > li {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .makingSection > ol > li:not(:last-child) {
+    margin-bottom: 0;
   }
   
   .makingSection .makeProgress {
-    aspect-ratio: initial;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 0.5;
     padding: 40px;
   }
   
   .makingSection .makeProgress i {
-    font-size: 100px;
-    color: var(--main-color);
+    font-size: 120px;
   }
   
   .makingSection .makeProgress h4 {
-    font-size: var(--font-lz);
+    font-size: 22px;
+  }
+
+  .makingSection .detailProgress li {
+    font-size: 22px;
+    text-align: center;
+  }
+
+
+
+
+  .awardSection {
+    padding: 100px 100px 50px 50px;
   }
   
-  .makingSection .detailProgress li {
-    font-size: var(--font-lz);
+  .awardSection h3 {
+    margin-bottom: 50px;
+    padding-left: 50px;
   }
-
-
-
-
+  
   .awardSection .awardList {
-    gap: 40px;
-    justify-content: center;
+    display: flex;
+    gap: 60px;
+    overflow-x: hidden;
+    padding: 50px 0 50px 50px;
   }
   
   .awardSection .awardList li {
-    min-width: 220px;
-    height: 260px;
+    min-width: 200px;
+    height: 240px;
   }
-
   
   .awardSection .awardList .awardIcon i {
-    font-size: 100px;
+    font-size: 80px;
+    color: var(--main-color);
   }
   
   .awardSection .awardList li h4 {
     font-size: var(--font-lz);
   }
-
   
   .awardSection .awardList li:last-child i:first-child {
-    left: 30px;
-    font-size: 60px;
+    font-size: 50px;
   }
   
   .awardSection .awardList li:last-child i:last-child {
-    font-size: 100px;
+    font-size: 80px;
   }
 
 
 
 
-  .productSection > div {
-    margin: 100px 0;
+  .productSection {
+    padding: 100px 50px;
   }
   
-  .productSection > div p {
-    margin-bottom: 10px;
-    font-size: var(--font-lz);
+  .productSection > div {
+    padding: 100px 50px 50px 0;
   }
+  
+  
+  .productSection > div h3 {
+    margin-bottom: 5px;
+    padding-left: 50px;
+    font-size: 22px;
+  }
+  
   
   .productSection ul {
-    gap: 40px;
-    padding-bottom: 100px;
+    gap: 60px;
+    padding: 5px 0 50px 50px;
   }
   
   .productSection ul li {
-    width: 200px;
+    min-width: 180px;
+    height: 180px;
+  }
+  
+  .productSection > div .productBtn {
+    position: absolute;
+    top: 100px;
+    right: 100px;
   }
   
   .productSection > div .productBtn button i {
-    font-size: 16px;
+    font-size: 22px;
   }
 
 
@@ -664,11 +975,8 @@
 
 
   .faqSection .formWrap {
+    background-color: #FFF;
     padding: 60px;
-  }
-
-  .faqSection .formWrap h3 {
-    font-size: var(--font-lz);
   }
   
   .faqSection .formWrap .formBtnWrap {
@@ -676,28 +984,25 @@
   }
   
   .faqSection .formWrap .formBtnWrap button {
-    width: 80px;
-    height: 30px;
-    font-size: 14px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
   }
-
   
   .faqSection .formWrap form input {
-    margin-bottom: 40px;
     padding: 10px 20px;
-  }
-  
-  .faqSection .formWrap form input[type="time"] {
-    margin-bottom: 60px;
+    font-size: var(--font-mz);
   }
   
   .faqSection .formWrap form textarea {
-    margin-bottom: 60px;
     padding: 10px 20px;
+    font-size: var(--font-mz);
   }
   
   .faqSection .formWrap form button {
     padding: 10px 20px;
+    margin-top: 60px;
+    font-size: var(--font-mz);
   }
 }
 
