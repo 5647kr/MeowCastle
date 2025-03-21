@@ -77,6 +77,7 @@ header nav ul li:nth-child(odd) {
 header nav ul li a {
   font-size: var(--font-mz);
   font-weight: var(--font-sbw);
+  color: var(--point-color);
 }
 
 header nav .navHeader {
@@ -224,50 +225,69 @@ main section h3 {
   margin-bottom: 40px;
 }
 
-.makingSection ol {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin: 0 40px;
+.makingSection > ol > li {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding-bottom: 10px;
+}
+
+.makingSection > ol > li:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .makingSection .makeProgress {
-  aspect-ratio: 1 / 1;
+  width: 120px;
+  height: 120px;
+  background-color: var(--bg-color);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--bg-color);
 }
 
 .makingSection .makeProgress i {
-  font-size: 60px;
+  font-size: 40px;
   color: var(--main-color);
 }
 
 .makingSection .makeProgress h4 {
   font-size: var(--font-smz);
+  font-weight: var(--font-sbw);
   text-align: right;
   color: var(--sub-color);
 }
 
 .makingSection .detailProgress {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .makingSection .detailProgress li {
   font-size: var(--font-smz);
-  list-style: disc;
+  list-style: number;
   list-style-position: inside;
 }
 
 
+.awardSection {
+  padding: 40px 20px 20px 20px;
+}
+
+.awardSection h3 {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
 
 .awardSection .awardList {
   display: flex;
+  justify-content: center;
   gap: 20px;
   overflow-x: hidden;
-  padding-bottom: 10px;
+  padding: 20px 0 20px 0;
 }
 
 .awardSection .awardList li {
@@ -275,7 +295,7 @@ main section h3 {
   height: 200px;
   padding: 30px 20px;
   background-color: #FFF;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -286,7 +306,7 @@ main section h3 {
 }
 
 .awardSection .awardList .awardIcon i {
-  font-size: 80px;
+  font-size: 60px;
   color: var(--main-color);
 }
 
@@ -307,47 +327,52 @@ main section h3 {
 
 .awardSection .awardList li:last-child i:first-child {
   position: absolute;
-  left: 20px;
-  top: 0;
-  font-size: 40px;
+  font-size: 30px;
+  bottom: 0;
 }
 
 .awardSection .awardList li:last-child i:last-child {
-  font-size: 70px;
+  font-size: 60px;
   color: #EEE;
-  margin-top: 10px;
 }
 
 
 
 
-
+.productSection {
+  padding: 40px 10px;
+}
 
 .productSection > div {
-  margin: 40px 0;
+  padding: 40px 10px 20px 0;
   position: relative;
 }
 
-.productSection > div:last-child {
-  margin-bottom: 0;
+
+.productSection > div h3 {
+  margin-bottom: 5px;
+  padding-left: 10px;
+  font-size: var(--font-smz);
+  font-weight: var(--font-mw);
 }
 
-.productSection > div p {
-  margin-bottom: 10px;
-  font-size: var(--font-smz);
-}
 
 .productSection ul {
   display: flex;
   gap: 20px;
+  padding: 5px 0 20px 10px;
   overflow-x: hidden;
-  padding-bottom: 40px;
 }
 
 .productSection ul li {
-  width: 100px;
-  aspect-ratio: 1 / 1;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  min-width: 100px;
+  height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.productSection ul li a {
+  width: 100%;
+  height: 100%;
 }
 
 .productSection ul li img {
@@ -358,20 +383,21 @@ main section h3 {
 
 .productSection > div .productBtn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 40px;
+  right: 20px;
 }
 
 .productSection > div .productBtn button i {
-  font-size: 14px;
+  font-size: var(--font-smz);
 }
+
 
 
 
 
 .faqSection .formWrap {
   background-color: #FFF;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   padding: 20px;
 }
 
@@ -404,24 +430,23 @@ main section h3 {
 .faqSection .formWrap form input {
   display: block;
   width: 100%;
-  margin-bottom: 20px;
   padding: 8px 20px;
   border-radius: 20px;
   border: 1px solid var(--main-color);
 }
 
-.faqSection .formWrap form input[type="time"] {
-  margin-bottom: 40px;
+.faqSection .formWrap form input:not(:first-child) {
+  margin-top: 20px;
 }
 
 .faqSection .formWrap form textarea {
   resize: none;
   width: 100%;
   min-height: 100px;
-  margin-bottom: 40px;
   padding: 8px 20px;
   border-radius: 20px;
   border: 1px solid var(--main-color);
+  margin-top: 20px;
 }
 
 .faqSection .formWrap form textarea:focus {
@@ -434,6 +459,7 @@ main section h3 {
   border-radius: 20px;
   border: 1px solid var(--main-color);
   color: #333;
+  margin-top: 40px;
 }
 
 .faqSection .formWrap form button.active {
