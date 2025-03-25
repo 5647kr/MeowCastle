@@ -285,32 +285,27 @@ main section h3 {
   display: flex;
   justify-content: center;
   gap: 20px;
-  overflow-x: hidden;
   padding: 20px 0 20px 0;
 }
 
 .awardSection .awardList li {
-  min-width: 160px;
-  height: 200px;
-  padding: 30px 20px;
+  width: 100%;
+  aspect-ratio: 1 / 1.4;
   background-color: #FFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.awardSection .awardList .awardIcon {
-  text-align: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .awardSection .awardList .awardIcon i {
-  font-size: 60px;
+  font-size: 2em;
   color: var(--main-color);
 }
 
 .awardSection .awardList li h4 {
-  font-size: var(--font-smz);
+  font-size: 8px;
   font-weight: var(--font-mw);
   text-align: center;
 }
@@ -326,12 +321,12 @@ main section h3 {
 
 .awardSection .awardList li:last-child i:first-child {
   position: absolute;
-  font-size: 30px;
+  font-size: 1em;
   bottom: 0;
 }
 
 .awardSection .awardList li:last-child i:last-child {
-  font-size: 60px;
+  font-size: 2em;
   color: #EEE;
 }
 
