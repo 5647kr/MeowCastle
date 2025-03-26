@@ -332,30 +332,34 @@ main section h3 {
 
 
 
-
 .productSection {
   padding: 40px 10px;
 }
 
 .productSection > div {
-  padding: 40px 10px 20px 0;
+  margin: 40px 10px 20px 20px;
   position: relative;
+  height: 150px;
+  overflow-x: hidden;
 }
-
 
 .productSection > div h3 {
   margin-bottom: 5px;
-  padding-left: 10px;
   font-size: var(--font-smz);
   font-weight: var(--font-mw);
 }
 
-
 .productSection ul {
   display: flex;
   gap: 20px;
-  padding: 5px 0 20px 10px;
-  overflow-x: hidden;
+  padding: 5px 0 20px 0;
+  position: absolute;
+  left: 0;
+}
+
+.productSection .right {
+  right: 0;
+  transform: translateX(-120px);
 }
 
 .productSection ul li {
