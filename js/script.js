@@ -8,6 +8,8 @@ class MeowCastle {
     this.blindBg = document.querySelector(".blindBg");
 
     const main = document.querySelector("main");
+    
+    this.productSection = main.querySelector(".productSection")
 
     this.faqSection = main.querySelector(".faqSection");
     this.formBtn = this.faqSection.querySelectorAll(".formBtnWrap button");
@@ -18,6 +20,8 @@ class MeowCastle {
     this.navMenuEvent();
     this.faqFormEvent();
     this.faqFormValidate();
+    this.productEvent(".left", "left");
+    this.productEvent(".right", "right");
   }
 
   navMenuEvent() {
@@ -58,6 +62,42 @@ class MeowCastle {
       menuBtn.disabled = false;
       document.body.style.overflow = "initial"
     })
+  }
+
+  productEvent(targetEl, direction) {
+    const target = this.productSection.querySelector(targetEl);
+    const firstLi = target.querySelector("li");
+    let slideWidth = 0;
+    
+    if (window.innerWidth < 481) {
+      slideWidth = firstLi.offsetWidth + 20;
+    } else if (481 <= window.innerWidth && window.innerWidth <= 768) {
+      slideWidth = firstLi.offsetWidth + 40;
+    } else if (769 <= window.innerWidth && window.innerWidth <= 1024) {
+      slideWidth = firstLi.offsetWidth + 40;
+    } else if (1025 <= window.innerWidth && window.innerWidth <= 1460) {
+      slideWidth = firstLi.offsetWidth + 60;
+    } else {
+      slideWidth = firstLi.offsetWidth + 60;
+    }
+
+    const animation = target.animate([
+      {left: direction === "left" ? `-${slideWidth}px` : `${slideWidth}px`}
+    ], {
+      duration: 4000,
+      easing: "linear"
+
+    })
+
+    animation.onfinish = () => {
+      if(direction === "left") {
+        target.appendChild(firstLi)
+      } else {
+        const lastLi = target.querySelector("li:last-child");
+        target.insertBefore(lastLi, target.firstChild);
+      }
+      this.productEvent(targetEl, direction);
+    }
   }
 
 
