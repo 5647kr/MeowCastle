@@ -9,6 +9,14 @@ class MeowCastle {
 
     const main = document.querySelector("main");
     
+    this.makeSection = main.querySelector(".makingSection");
+    this.makeList = this.makeSection.querySelectorAll(".makingList > li");
+
+
+    this.awardSection = main.querySelector(".awardSection");
+    this.awardList = this.awardSection.querySelectorAll(".awardList li");
+
+
     this.productSection = main.querySelector(".productSection")
 
     this.faqSection = main.querySelector(".faqSection");
@@ -18,6 +26,8 @@ class MeowCastle {
 
   mainPageEvent() {
     this.navMenuEvent();
+    this.makeAnimateEvent();
+
     this.faqFormEvent();
     this.faqFormValidate();
     this.productEvent(".left", "left");
@@ -64,6 +74,8 @@ class MeowCastle {
     })
   }
 
+
+
   productEvent(targetEl, direction) {
     const target = this.productSection.querySelector(targetEl);
     const firstLi = target.querySelector("li");
@@ -98,6 +110,40 @@ class MeowCastle {
       }
       this.productEvent(targetEl, direction);
     }
+  }
+
+  makeObserver = new IntersectionObserver((e) => {
+    e.forEach((li) => {
+      if(li.isIntersecting) {
+        li.target.style.opacity = 1;
+        li.target.style.transform = "translateX(0)";
+      } else {
+        li.target.style.opacity = 0;
+        li.target.style.transform = "translateX(-50px)";
+      }
+    })
+  })
+
+  awardObserver = new IntersectionObserver((e) => {
+    e.forEach((li) => {
+      if(li.isIntersecting) {
+        li.target.style.opacity = 1;
+        li.target.style.transform = "translateY(0)";
+      } else {
+        li.target.style.opacity = 0;
+        li.target.style.transform = "translateY(-50px)";
+      }
+    })
+  })
+
+  makeAnimateEvent() {
+    this.makeList.forEach((item) => {
+      this.makeObserver.observe(item)
+    })
+
+    this.awardList.forEach((item) => {
+      this.awardObserver.observe(item)
+    })
   }
 
 
