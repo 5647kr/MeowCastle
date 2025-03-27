@@ -80,6 +80,10 @@ header nav ul li a {
   color: var(--point-color);
 }
 
+header nav ul li a:hover {
+  color: var(--sub-color);
+}
+
 header nav .navHeader {
   position: absolute;
   top: 0;
@@ -231,6 +235,24 @@ main section h3 {
   gap: 20px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.makingSection > ol > li:nth-child(1) {
+  transition: all 0.5s;
+}
+
+.makingSection > ol > li:nth-child(2) {
+  transition: all 1s;
+}
+
+.makingSection > ol > li:nth-child(3) {
+  transition: all 1.5s;
+}
+
+.makingSection > ol > li:nth-child(4) {
+  transition: all 2s;
 }
 
 .makingSection > ol > li:not(:last-child) {
@@ -297,6 +319,28 @@ main section h3 {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.awardSection .awardList li:nth-child(1) {
+  transition: all 0.5s;
+}
+
+.awardSection .awardList li:nth-child(2) {
+  transition: all 1s;
+}
+
+.awardSection .awardList li:nth-child(3) {
+  transition: all 1.5s;
+}
+
+.awardSection .awardList li:nth-child(4) {
+  transition: all 2s;
+}
+
+.awardSection .awardList li:nth-child(5) {
+  transition: all 2.5s;
 }
 
 .awardSection .awardList .awardIcon i {
